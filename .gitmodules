@@ -1,0 +1,3 @@
+[submodule "Edabit"]
+	path = Edabit
+	url = git@github.com:FarzanRashid/Edabit-Solutions.git
