@@ -1,3 +1,6 @@
 [submodule "Edabit"]
 	path = Edabit
 	url = git@github.com:FarzanRashid/Edabit-Solutions.git
+[submodule "Codewars"]
+	path = Codewars
+	url = git@github.com:FarzanRashid/Codewars-solutions.git
