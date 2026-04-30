@@ -1,14 +1,17 @@
 class Solution:
-    def nextGreaterElements(self, nums: List[int]) -> List[int]:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         stack = []
-        n = len(nums)
-        output = [-1] * n
-        for i in range(2 * n):
-            while stack and nums[stack[-1]] < nums[i % n]:
-                idx = stack.pop()
-                output[idx] = nums[i % n]
-            if i < n:
-                stack.append(i)
+        nge = {}
+        output = []
+        for i in range(len(nums2)):
+            while stack and nums2[i] > nums2[stack[-1]]:
+                num = nums2[stack.pop()]
+                nge[num] = nums2[i]
+            stack.append(i)
+        for i in stack:
+            nge[nums2[i]] = -1
+        for i in nums1:
+            output.append(nge[i])
         return output
 
 # Time complexity = O(n)
